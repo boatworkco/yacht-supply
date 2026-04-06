@@ -1,0 +1,5 @@
+# robots.txt for yachtsupply.com
+User-agent: *
+Allow: /
+
+Sitemap: https://yachtsupply.com/sitemap.xml
