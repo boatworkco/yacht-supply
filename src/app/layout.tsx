@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -43,6 +44,9 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body className="min-h-screen flex flex-col bg-navy text-white antialiased">
         {children}
+        {/* KAN-5276: this site's own page traffic, read back through the Vercel
+         * Web Analytics API so it never mixes with another tenant's. */}
+        <Analytics />
       </body>
     </html>
   );
