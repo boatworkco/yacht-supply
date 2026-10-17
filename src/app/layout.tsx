@@ -43,6 +43,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className="min-h-screen flex flex-col bg-navy text-white antialiased">
+        <script
+          async
+          src="https://track.boatwork.co/t.js"
+          data-site="yachtsupply"
+        />
         {children}
         {/* KAN-5276: this site's own page traffic, read back through the Vercel
          * Web Analytics API so it never mixes with another tenant's. */}
